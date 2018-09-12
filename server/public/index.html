@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.js"></script>
+    <script src="scripts/client.js"></script>
+    <title>Angular Restaurant</title>
+</head>
+<body ng-app="FoodApp">
+    <div ng-controller="FoodController as vm">
+
+        <h1>Angular Restaurant</h1>
+        <h2>Menu</h2>
+        <ul> 
+            <li ng-repeat="thing in vm.menu">
+                {{thing}}
+            </li>
+        </ul>
+
+        <input type="text" placeholder="food name" value='' ng-model='vm.input'>
+        <input type="text" placeholder="calories" value='' ng-model='vm.input'>
+        <button ng-click="vm.addFood()">Add Food</button>
+    </div>
+</body>
+</html>
